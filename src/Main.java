@@ -3,8 +3,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by AnShafs on 10.07.2016.
+ * Программа считывает с консоли минуту работы светофора и возвращает цвет.
+ *
+ * Условие:
+ * Написать светофор с ООП.
+ * Первые две минуты горит красный свет,
+ * следующие три минуты желтый,
+ * следующие четыре минуты зеленый.
  */
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -12,8 +19,10 @@ public class Main {
         TrafficLight trafficLight = new TrafficLight();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         double minute = getMinuteValue(reader.readLine());
-        if (minute >= 0)
-            System.out.println(trafficLight.getColorForMinute(minute));
+        if (minute >= 0) {
+            trafficLight.setMinuteOfWork(minute);
+            System.out.println(trafficLight.getColor());
+        }
         else
             System.out.println("Введено некорректное значение.");
     }

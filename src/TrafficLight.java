@@ -1,6 +1,3 @@
-/**
- * Created by AnShafs on 10.07.2016.
- */
 public class TrafficLight {
     final int RED_TIME = 2;
     final int YELLOW_TIME = 3;
@@ -12,11 +9,6 @@ public class TrafficLight {
     public TrafficLight(){
         minuteOfWork = 0;
         updateColor();
-    }
-
-    public String getColorForMinute(double minute) {
-        setMinuteOfWork(minute);
-        return getColor();
     }
 
     public void setMinuteOfWork(double minuteOfWork) {
