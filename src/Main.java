@@ -20,12 +20,19 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         double minute = getMinuteValue(reader.readLine());
         if (minute >= 0) {
-            trafficLight.setMinuteOfWork(minute);
+            trafficLight.setMinuteOfCycle(minute);
             System.out.println(trafficLight.getColor());
         }
         else
             System.out.println("Введено некорректное значение.");
     }
+
+    /**
+     * метод принимает строковое значение минуты работы и возвращает числовое типа double
+     * в случае ошибки или отрицательного значения возвращает -1
+     * @param value
+     * @return
+     */
 
     public static double getMinuteValue(String value){
         double minute = 0.0;
